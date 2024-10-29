@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" href="assets/header/Logo_Pellor__1_-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+        <!-- NAVBAR SECTION -->
+        <header class="header">
+            <nav class="navbar">
+                <a href="#" class="nav-logo">PellorTransTravel</a>
+                    <ul class="nav-menu">
+                <li class="nav-item">
+                <a href="index.html" class="nav-link">Beranda</a>
+                </li>
+                <li class="nav-item">
+                <a href="about.html" class="nav-link">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                <a href="layanan.html" class="nav-link">Layanan Kami</a>
+                </li>
+                <li class="nav-item">
+                <a href="contact.html" class="nav-link">Kontak Kami</a>
+                </li>
+                    </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <p>Berikan ulasan anda terkait PellorTransTravel selama perjalanan</p>
+            <form action="">
+                <div>
+                    <span>
+                        <label for="name">Nama </label><br/>
+                        <input id="name" type="text" placeholder="Masukkan Nama Anda" required>
+                    </span>
+                    <span>
+                        <label for="email">Email</label></br>
+                        <input id="email" type="email" placeholder="Masukkan Email Anda" required>
+                    </span>
+                </div>
+                <label for="message">Pesan Anda</label><br/>
+                <textarea name="" id="message" rows="10" placeholder="Tinggalkan Pesan Anda Disini" required></textarea>
+                <button onclick="sendToWhatsapp()">Kirim Ulasan</button>
+            </form>
+        </div>
+    
+
+
+
+
+            <!-- FOOTER SECTION -->
+            <footer>
+                <div class="footer">
+                <div class="row">
+                <a href="https://www.facebook.com/profile.php?id=61551937776160&mibextid=ZbWKwL" target="_blank">facebook</a>
+                <a href="404.html" target="_blank">instagram</a>
+                <a href="404.html" target="_blank">youtube</a>
+                <a href="https://www.tiktok.com/@ahmad.pellor986" target="_blank">tiktok</a> 
+                </div>
+                
+                <div class="row">
+                <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="layanan.html">Layanan Kami</a></li>
+                <li><a href="contact.html">Kontak Kami</a></li>
+                <li><a href="https://wa.me/6281532794844" target="_blank">Hubungi Kami</a></li>
+                </ul>
+                </div>
+                
+                <div class="row">
+                PellorTransTravel Copyright © 2024 PellorTransTravel  
+                </div>
+                </div>
+                </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // INTEGRASI API KE WHATSAPP
+        function sendToWhatsapp(){
+	let number = "+6285693672730";
+
+
+	let name = document.getElementById('name').value;
+	let email = document.getElementById('email').value;
+	let message = document.getElementById('message').value;
+
+
+	var url = "https://wa.me/" + number + "?text="
+	+ "Name : " +name+ "%0a"
+	+ "Email : " +email+ "%0a"
+	+ "Message : " +message+ "%0a%0a";
+
+
+	window.open(url, '_blank').focus();
+}
+
+    </script>
+</body>
+</html>
